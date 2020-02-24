@@ -1,0 +1,14 @@
+{
+  "name": "flowable-technical-interview",
+  "version": "1.0.0",
+  "description": "Shopping list Rest API for the Flowable technical interview",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3001"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.15.1"
+  }
+}
