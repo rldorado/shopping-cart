@@ -17,6 +17,7 @@
                 :id="product.id"
                 :name="product.productName" 
                 :image_url="product.image_url"
+                :stock="product.stock"
                 :description="product.productDescription"
                 :price="product.price"
                 :favorite="product.favorite"
