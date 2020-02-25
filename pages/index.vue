@@ -1,11 +1,13 @@
 <template>
-  <section class="container text-center">
-    <h1 class="title">
+  <section class="container text-center p-6 rounded-lg shadow-xl">
+    <h1 class="text-2xl text-gray-900 leading-tight">
         Shopping cart
     </h1>
-    <h2 class="subtitle">
+    <p class="text-base text-gray-600 leading-normal">
         Made with <a href="https://vuejs.org/">vue.js</a> and <a href="https://nuxtjs.org/">nuxt.js</a>
-    </h2>
-    <nuxt-link to="/products"><button class="bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">Start</button></nuxt-link>
+    </p>
+    <nuxt-link to="/products">
+        <button class="bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mt-2">Let's start!</button>
+    </nuxt-link>
   </section>
 </template>

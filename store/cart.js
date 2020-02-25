@@ -10,10 +10,14 @@ export const total = (payloadArr) => {
 }
 
 const state = () => ({
-    cart: [],
+    cart: [{
+        id: 1,
+        name: 'Patatas',
+        image_url: 'https://dummyimage.com/400x400/2ee9f7/000&text=Handcrafted Metal Towels',
+        stock: 1
+    }],
     amount: 0,
-    quantity: 0,
-    toggleSidebar: false
+    quantity: 0
 })
 
 const mutations = {
@@ -21,20 +25,15 @@ const mutations = {
         state.cart = payload
         state.amount = total(payload).amount
         state.quantity = total(payload).quantity
-    },
-    'TOGGLE_SIDEBAR' (state) {
-        state.toggleSidebar = !state.toggleSidebar
     }
 }
 
 const actions = {
-    toggleSidebar({ commit }) {
-        commit('TOGGLE_SIDEBAR')
-    }
+
 }
 
 const getters = {
-    toggleSidebar: state => state.toggleSidebar
+    
 }
 
 export default { state, mutations, actions, getters }

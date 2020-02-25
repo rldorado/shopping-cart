@@ -1,4 +1,3 @@
-
 export default {
   mode: 'universal',
   /*
@@ -22,7 +21,9 @@ export default {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [
+    '~/assets/css/main.css'
+  ],
   /*
   ** Plugins to load before mounting the App
   */
@@ -42,6 +43,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/device'
   ],
   /*
   ** Axios module configuration

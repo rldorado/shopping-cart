@@ -30,7 +30,7 @@ const actions = {
 }
 
 const getters = {
-    products(state) { return state.products }
+    products: (state) => state.products
 }
 
 export default { state, mutations, actions, getters }
