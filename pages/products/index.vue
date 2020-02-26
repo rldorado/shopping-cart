@@ -4,16 +4,8 @@
             <p class="font-bold">Please wait!</p>
             <p class="text-sm">Loading data...</p>
             </div>
-        <section class="flex content-start flex-wrap">
-            <Product v-for="product in products" :key="product._id" 
-                :id="product.id"
-                :name="product.productName" 
-                :image_url="product.image_url"
-                :stock="product.stock"
-                :description="product.productDescription"
-                :price="product.price"
-                :favorite="product.favorite"
-            />
+        <section class="flex content-start flex-wrap rounded">
+            <Product v-for="product in products" :key="product.id" :product="product" />
         </section>
     </div>
 </template>
@@ -22,6 +14,7 @@
 import Product from './product'
 
 export default {
+    layout: ({ isMobile }) => isMobile ? 'mobile' : 'default',
     components: { Product },
     computed: {
         products() { 
@@ -29,7 +22,7 @@ export default {
         }
     },
     mounted() {
-        this.$store.dispatch('products/getProducts')
+        this.$store.dispatch('products/fetchProducts')
     }
 }
 </script>

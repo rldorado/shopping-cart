@@ -20,17 +20,13 @@ import Cart from '@/pages/cart'
 
 export default {
   components: { Cart },
-  computed: ({
+  computed: {
       destination() {
         return (this.$route.name == 'products') ? 'cart' : 'products'
       },
       toggleSidebar() {
         return this.$store.getters['sidebar/toggleSidebar']
       }
-  }),
-  mounted() {
-    console.log('isMobile = ' + this.$device.isMobile)
-    console.log('isDesktop = ' + this.$device.isDesktop)
   }
 }
 </script>

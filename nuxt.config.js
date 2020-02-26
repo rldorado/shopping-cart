@@ -42,8 +42,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    '@nuxtjs/device'
+    '@nuxtjs/pwa'
   ],
   /*
   ** Axios module configuration
@@ -60,5 +59,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  router: {
+    middleware: ['mobile']
   }
 }

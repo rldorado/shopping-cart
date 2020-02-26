@@ -28,14 +28,9 @@ html {
 
 .sidenav {
   height: 100%;
-  width: 300px;
-  background-color: #d6d6d6;
+  background-color: #f6f6f6;
   z-index: 10000;
-  position: fixed;
-  top: 0;
-  right: 0;
   box-sizing: border-box;
-  padding: 30px;
 }
 .backdrop {
   width: 100%;
@@ -53,4 +48,21 @@ html {
 .slide-side-enter,
 .slide-side-leave-to {
   transform: translateX(100%);
+}
+
+@media (min-width: 768px) {
+  .sidenav {
+    width: 350px;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidenav {
+    width: 100%;
+    padding: 1rem;
+  }
 }
