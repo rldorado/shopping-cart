@@ -8,7 +8,15 @@
         <transition name="slide-side">
             <Cart v-if="toggleSidebar" />
         </transition>
-        <h1 class="text-xl" v-show="$route.name == 'products'">List of products</h1>
+        <div v-show="$route.name == 'products'" class="inline-flex">
+          <h1 class="text-xl" >List of products</h1>
+          <button class="ml-2 border px-4 rounded-full inline-flex items-center hover:bg-red-300" @click="toggleFavorites"> 
+            <svg :class="{ 'fill-current text-red-500' : toggle }" class="feather feather-heart mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+            Only
+          </button>
+        </div>
         <h1 class="text-xl" v-show="$route.name == 'cart'">Cart</h1>
       </nav>
     <nuxt />
@@ -20,6 +28,9 @@ import Cart from '@/pages/cart'
 
 export default {
   components: { Cart },
+  data() {
+    return { toggle: false }
+  },
   computed: {
       destination() {
         return (this.$route.name == 'products') ? 'cart' : 'products'
@@ -27,6 +38,12 @@ export default {
       toggleSidebar() {
         return this.$store.getters['sidebar/toggleSidebar']
       }
+  },
+  methods: {
+    toggleFavorites() {
+      this.toggle ? this.$store.dispatch('products/fetchProducts') : this.$store.dispatch('products/fetchFavoriteProducts')
+      this.toggle = !this.toggle
+    }
   }
 }
 </script>

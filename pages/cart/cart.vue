@@ -27,7 +27,9 @@ export default {
             }).catch(err => console.log(err))
         },
         addToCart() {
-            this.$store.dispatch('cart/addToCart', this.product)
+            this.$store.dispatch('cart/addToCart', this.product).then(() => {
+                this.$store.dispatch('products/takeFromStock', this.product)
+            }).catch(err => console.log(err))
         }
     }
 }

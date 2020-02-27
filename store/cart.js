@@ -32,6 +32,7 @@ const mutations = {
                 productName: payload.productName,
                 image_url: payload.image_url,
                 price: payload.price,
+                stock: payload.stock,
                 quantity: 1
             }]
         }

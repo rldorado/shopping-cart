@@ -1,8 +1,8 @@
 <template>
-    <section class="relative sm:w-1/2 md:w-1/3 xl:w-1/6 mb-4 shadow-lg flex flex-wrap mb-2 mx-2 content-between">
+    <section class="relative sm:w-1/2 md:w-1/3 xl:w-1/6 mb-4 shadow-lg flex flex-wrap mb-2 mx-2 rounded content-between">
         <div class="flex flex-wrap">
             <figure>
-                <img class="w-full" :src="product.image_url" alt="Img" />
+                <img class="w-full rounded-t-lg" :src="product.image_url" alt="Img" />
                 <div class="absolute top-0 right-0 p-2" @click="$store.dispatch('products/updateFavoriteProduct', product)">
                     <svg :class="{ 'fill-current text-red-500': (product.favorite != 0) }" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
                         <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
