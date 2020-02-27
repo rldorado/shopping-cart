@@ -1,4 +1,4 @@
-# shopping-cart
+# Shopping Cart
 
 > Web application where you can see a list of products and add them to your shopping cart
 
@@ -7,6 +7,10 @@
 ``` bash
 # install dependencies
 $ npm install
+
+# run fake server api at localhost:3001
+$ cd server-api
+$ npm start
 
 # serve with hot reload at localhost:3000
 $ npm run dev
