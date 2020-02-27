@@ -20,11 +20,18 @@ const mutations = {
         })
     },
     'TAKE_FROM_STOCK' (state, payload) {
-        const newStock = payload.stock - 1
-        axios.patch(apiURL + `/grocery/${payload.id}`, { stock: newStock }).catch(err => console.log(err))
+        // axios.patch(apiURL + `/grocery/${payload.id}`, { stock: newStock }).catch(err => console.log(err))
         state.products.map(product => {
             if (product.id == payload.id) {
-                product.stock = newStock
+                product.stock--
+            }
+        })
+    },
+    'ADD_TO_STOCK' (state, payload) {
+        // axios.patch(apiURL + `/grocery/${payload.id}`, { stock: newStock }).catch(err => console.log(err))
+        state.products.map(product => {
+            if (product.id == payload.id) {
+                product.stock++
             }
         })
     }
@@ -44,6 +51,9 @@ const actions = {
     },
     takeFromStock({ commit }, product) {
         commit('TAKE_FROM_STOCK', product)
+    },
+    addToStock({ commit }, product) {
+        commit('ADD_TO_STOCK', product)
     }
 }
 

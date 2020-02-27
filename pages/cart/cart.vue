@@ -22,7 +22,9 @@ export default {
     props: ['product'],
     methods: {
         removeFromCart() {
-            this.$store.dispatch('cart/removeFromCart', this.product)
+            this.$store.dispatch('cart/removeFromCart', this.product).then(() => {
+                this.$store.dispatch('products/addToStock', this.product)
+            }).catch(err => console.log(err))
         },
         addToCart() {
             this.$store.dispatch('cart/addToCart', this.product)
