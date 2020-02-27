@@ -1,9 +1,9 @@
 <template>
-  <section class="container text-center p-6 rounded-lg shadow-xl">
-    <h1 class="text-2xl text-gray-900 leading-tight">
+  <section class="w-full text-center py-6 rounded-lg shadow-xl">
+    <h1 class="text-2xl text-gray-900">
         Shopping cart
     </h1>
-    <p class="text-base text-gray-600 leading-normal">
+    <p class="text-base text-gray-600">
         Made with <a href="https://vuejs.org/">vue.js</a> and <a href="https://nuxtjs.org/">nuxt.js</a>
     </p>
     <nuxt-link to="/products">

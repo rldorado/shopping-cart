@@ -13,7 +13,7 @@ const mutations = {
     'UPDATE_FAVORITE_PRODUCT' (state, payload) {
         const newFavorite = (payload.favorite == 0) ? "1" : 0
         axios.patch(apiURL + `/grocery/${payload.id}`, { favorite: newFavorite }).catch(err => console.log(err))
-        state.products = state.products.map(product => {
+        state.products.map(product => {
             if (product.id == payload.id) {
                 product.favorite = newFavorite
             }
@@ -27,8 +27,8 @@ const actions = {
             commit('FETCH_PRODUCTS', res.data)
         })
     },
-    updateFavoriteProduct({ commit }, id) {
-        axios.get(apiURL + `/grocery/${id}`).then(res => {
+    updateFavoriteProduct({ commit }, product) {
+        axios.get(apiURL + `/grocery/${product.id}`).then(res => {
             commit('UPDATE_FAVORITE_PRODUCT', res.data)
         })
         .catch(err => console.log(err))

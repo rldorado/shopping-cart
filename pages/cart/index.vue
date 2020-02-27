@@ -1,13 +1,7 @@
 <template>
     <div class="sidenav flex content-between flex-wrap">
         <div class="container">
-            <Cart v-for="product in products" :key="product.id" 
-                :id="product.id"
-                :productName="product.productName" 
-                :image_url="product.image_url"
-                :price="product.price"
-                :quantity="product.quantity"
-            />
+            <Cart v-for="product in products" :key="product.id" :product="product" />
         </div>
         <div class="container">
             <p class="text-lg my-2">Total amount: <span class="text-blue-600">{{ totalAmount }} €</span></p>
