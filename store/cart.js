@@ -11,24 +11,6 @@ export const totals = (payloadArr) => {
     }
 }
 
-export const increase = (payloadArr, id) => {
-    const quantity = payloadArr.map(cartArr => {
-        if (cartArr.id == id) cartArr.quantity++
-    })
-    return {
-        quantity: quantity
-    }
-}
-
-export const decrease = (payloadArr, id) => {
-    const quantity = payloadArr.map(cartArr => {
-        if (cartArr.id == id) cartArr.quantity--
-    })
-    return {
-        quantity: quantity
-    }
-}
-
 const state = () => ({
     cart: [],
     totalAmount: 0,
@@ -39,7 +21,11 @@ const mutations = {
     'ADD_TO_CART' (state, payload) {
         const isInCart = state.cart.find(product => product.id == payload.id)
         if (isInCart) {
-            state.cart = increase(state.cart, payload.id)
+            state.cart.map(product => {
+                if (product.id == payload.id) {
+                    product.quantity++
+                }
+            })
         } else {
             state.cart = [...state.cart, {
                 id: payload.id,
@@ -51,12 +37,29 @@ const mutations = {
         }
         state.totalAmount = totals(state.cart).amount
         state.totalQuantity = totals(state.cart).quantity
+    },
+    'REMOVE_FROM_CART' (state, payload) {
+        if (payload.quantity > 1) {
+            state.cart.map(product => {
+                if (product.id == payload.id) {
+                    product.quantity--
+                }
+            })
+        } else {
+            const id = state.cart.findIndex(product => product.id == payload.id)
+            state.cart.splice(id, 1)
+        }
+        state.totalAmount = totals(state.cart).amount
+        state.totalQuantity = totals(state.cart).quantity
     }
 }
 
 const actions = {
     addToCart({ commit }, payload) {
         commit('ADD_TO_CART', payload)
+    },
+    removeFromCart({ commit }, payload) {
+        commit('REMOVE_FROM_CART', payload)
     }
 }
 
