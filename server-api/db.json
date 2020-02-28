@@ -3,16 +3,16 @@
     {
       "id": "41fd4fd9-95c7-4809-96db-a147d352fdbb",
       "image_url": "https://dummyimage.com/400x400/28200e/000&text=Unbranded Metal Chair",
-      "stock": 8,
+      "stock": 7,
       "productName": "Unbranded Metal Chair",
       "price": 43,
       "productDescription": "Porro tempore autem. Sunt molestias qui quod recusandae nemo quia optio. Nostrum aperiam officiis aut reprehenderit illo.",
-      "favorite": "1"
+      "favorite": 0
     },
     {
       "id": "20cc33f1-223b-4cf0-878d-fdedb3f60b56",
       "image_url": "https://dummyimage.com/400x400/2ee9f7/000&text=Handcrafted Metal Towels",
-      "stock": 41,
+      "stock": 35,
       "productName": "Handcrafted Metal Towels",
       "price": 98,
       "productDescription": "Rerum minima laudantium blanditiis dolorem dolores ut sint ut quidem. Est doloremque repellat excepturi dolor consequatur rerum qui. Facere ut vel et enim accusamus ipsum dolores aut. Eaque quo ut omnis unde quam error voluptas non iure.",
@@ -21,7 +21,7 @@
     {
       "id": "ab284424-8e46-4a3e-8e13-e179b0ab8bb5",
       "image_url": "https://dummyimage.com/400x400/4de5d5/000&text=Awesome Cotton Soap",
-      "stock": 47,
+      "stock": 38,
       "productName": "Awesome Cotton Soap",
       "price": 66,
       "productDescription": "Molestias sunt quia omnis reprehenderit quia. Iste quia et similique voluptate. Et sit molestias.",
@@ -30,7 +30,7 @@
     {
       "id": "c34287bf-9cb7-40a7-ad07-6534e45a6868",
       "image_url": "https://dummyimage.com/400x400/bc27b5/000&text=Gorgeous Frozen Chair",
-      "stock": 28,
+      "stock": 24,
       "productName": "Gorgeous Frozen Chair",
       "price": 47,
       "productDescription": "Harum modi sunt. Voluptatem ut molestiae consequatur. Ea omnis architecto laboriosam accusantium reiciendis corporis exercitationem ad dolor. Fugit autem placeat voluptas sint aut aliquam sed. Totam fuga nesciunt rerum voluptatibus. Voluptatibus voluptates vel ut et temporibus perferendis laboriosam accusamus.",
@@ -39,7 +39,7 @@
     {
       "id": "41fb4f07-22fd-4ef6-b23c-1ac022b57d11",
       "image_url": "https://dummyimage.com/400x400/f04d95/000&text=Incredible Fresh Ball",
-      "stock": 36,
+      "stock": 34,
       "productName": "Incredible Fresh Ball",
       "price": 71,
       "productDescription": "Eveniet aliquid quisquam eveniet quam. Porro autem dolorem repellat minus occaecati neque non aperiam. Quaerat aut quia dolor illo et. Voluptatibus nemo eos eum.",
@@ -246,11 +246,11 @@
     {
       "id": "27e066ab-9766-46ee-abf4-934adebde3a4",
       "image_url": "https://dummyimage.com/400x400/c3a6a4/000&text=Gorgeous Fresh Pizza",
-      "stock": 36,
+      "stock": 34,
       "productName": "Gorgeous Fresh Pizza",
       "price": 37,
       "productDescription": "Et aut eius veniam ipsum officiis corrupti. Repellendus pariatur suscipit qui est sint. Dolore et maxime. Vel eos unde sed quasi at consequatur incidunt. Corrupti voluptates quibusdam optio atque cum cum alias reiciendis. Ducimus quos amet voluptatem voluptatem.",
-      "favorite": 0
+      "favorite": "1"
     },
     {
       "id": "3e113de2-d32e-4d0c-8bee-6bbdd5b491df",

@@ -1,7 +1,3 @@
-import axios from 'axios'
-
-const apiURL = 'http://localhost:3001'
-
 export const totals = (payloadArr) => {
     const totalAmount = payloadArr.map(cartArr => cartArr.price * cartArr.quantity).reduce((a,b) => a + b, 0)
     const totalQuantity = payloadArr.map(cartArr => cartArr.quantity).reduce((a,b) => a + b, 0)
